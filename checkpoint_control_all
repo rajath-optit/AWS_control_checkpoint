@@ -1,0 +1,729 @@
+All Controls
+Account
+Security contact information should be provided for an AWS account
+ACM
+Ensure that ACM certificates are not in failed state
+Ensure that ACM certificates are not in pending validation state
+ACM certificates should not use wildcard certificates
+Ensure that all the expired ACM certificates are removed
+RSA certificates managed by ACM should use a key length of at least 2,048 bits
+API Gateway
+API Gateway methods authorizer should be configured
+API Gateway methods request parameter should be validated
+API Gateway REST API public endpoints should be configured with authorizer
+API Gateway routes should specify an authorization type
+API Gateway V2 authorizer should be configured
+API Gateway REST API endpoint type should be configured to private
+API Gateway REST API stages should have AWS X-Ray tracing enabled
+Access logging should be configured for API Gateway V2 Stages
+AppStream
+AppStream fleet default internet access should be disabled
+AppStream fleet idle disconnect timeout should be set to less than or equal to 10 mins
+AppStream fleet max user duration should be set to less than 10 hours
+AppStream fleet session disconnect timeout should be set to less than or equal to 5 mins
+AppSync
+AppSync graphql API logging should be enabled
+Athena
+Athena workgroups should be encrypted at rest
+Athena workgroups should enforce configuration
+Auto Scaling
+EC2 auto scaling group launch configurations user data should not have any sensitive data
+Auto Scaling groups should not have any suspended processes
+Ensure EC2 Auto Scaling Groups Propagate Tags to EC2 Instances that it launches
+EC2 Auto Scaling groups should use EC2 launch templates
+EC2 auto scaling group launch configurations should not have metadata response hop limit greater than 1
+Auto Scaling group should configure EC2 instances to require Instance Metadata Service Version 2 (IMDSv2)
+EC2 auto scaling groups should use multiple instance types in multiple availability zones
+Backup
+Backup plan min frequency and min retention check
+Backup plan should exist in a region
+Backup report plan should exist in a region where backup plan is enabled
+Backup vaults should exist in a region
+CloudFormation
+CloudFormation stacks differ from the expected configuration
+CloudFormation stacks should have notifications enabled
+CloudFormation stacks should have rollback enabled
+Cloudformation stacks termination protection should be enabled
+CloudFront
+CloudFront distributions should have a default root object configured
+CloudFront distributions should require encryption in transit
+CloudFront distributions should have field level encryption enabled
+CloudFront distributions should have geo restriction enabled
+CloudFront distributions should have latest TLS version
+CloudFront distributions should not point to non-existent S3 origins
+CloudFront distributions should encrypt traffic to non S3 origins
+CloudFront distributions should have origin access identity enabled
+CloudFront distributions should use SNI to serve HTTPS requests
+CloudFront distributions should use custom SSL/TLS certificates
+CloudFront distributions should use secure SSL cipher
+CloudTrail
+CloudTrail trails should be enabled in all regions
+CloudTrail multi region trails should be integrated with CloudWatch logs
+Ensure S3 bucket access logging is enabled on the CloudTrail S3 bucket
+Ensure that Object-level logging for read events is enabled for S3 bucket
+Ensure that Object-level logging for write events is enabled for S3 bucket
+CloudTrail trail S3 buckets MFA delete should be enabled
+At least one CloudTrail trail should be enabled in the AWS account
+CloudTrail trails should have insight selectors and logging enabled
+CloudWatch
+CloudWatch alarm action should be enabled
+Log group encryption at rest should be enabled
+Ensure a log metric filter and alarm exist for S3 bucket policy changes
+Ensure a log metric filter and alarm exist for CloudTrail configuration changes
+Ensure a log metric filter and alarm exist for AWS Config configuration changes
+Ensure a log metric filter and alarm exist for AWS Management Console authentication failures
+Ensure a log metric filter and alarm exist for AWS Management Console sign-in without MFA
+Ensure a log metric filter and alarm exist for disabling or scheduled deletion of customer managed keys
+Ensure a log metric filter and alarm exist for IAM policy changes
+Ensure a log metric filter and alarm exist for changes to Network Access Control Lists (NACL)
+Ensure a log metric filter and alarm exist for changes to network gateways
+Ensure AWS Organizations changes are monitored
+Ensure a log metric filter and alarm exist for usage of 'root' account
+Ensure a log metric filter and alarm exist for route table changes
+Ensure a log metric filter and alarm exist for security group changes
+Ensure a log metric filter and alarm exist for unauthorized API calls
+Ensure a log metric filter and alarm exist for VPC changes
+CodeBuild
+CodeBuild project environments should not have privileged mode enabled
+CodeBuild GitHub or Bitbucket source repository URLs should use OAuth
+CodeDeploy
+Codedeploy deployment groups lambda allatonce traffic shift should be disabled
+Config
+Config configuration recorder should not fail to deliver logs
+DAX
+DynamoDB Accelerator (DAX) clusters should be encrypted at rest
+Directory Service
+Directory Service certificates should not expire within 90 days
+Directory Service directories manual snapshots limit should not be less than 2
+Directory Service directories should have SNS notification enabled
+DLM
+DLM EBS snapshot lifecycle policy should be enabled
+DMS
+Ensure that all the expired DMS certificates are removed
+DMS endpoints should use SSL
+DMS replication instances should have automatic minor version upgrade enabled
+DMS replication tasks for the source database should have logging enabled
+DMS replication tasks for the target database should have logging enabled
+DocumentDB
+AWS DocumentDB clusters should have an adequate backup retention period
+DocumentDB clusters should have deletion protection enabled
+AWS DocumentDB clusters should be encrypted at rest
+DocumentDB instance should be encrypted at rest
+DocumentDB instance logging should be enabled
+Amazon DocumentDB manual cluster snapshots should not be public
+DRS
+DRS jobs should be enabled
+DynamoDB
+DynamoDB table should have deletion protection enabled
+DynamoDB table should be encrypted with AWS KMS
+EBS
+Attached EBS volumes should have delete on termination enabled
+Attached EBS volumes should have encryption enabled
+EBS snapshots should be encrypted
+EBS volumes should be in a backup plan
+EBS volumes should be protected by a backup plan
+EBS volume snapshots should exist
+EC2
+Ensure Images (AMI's) are encrypted
+Ensure Images (AMI) are not older than 90 days
+EC2 AMIs should restrict public access
+EC2 Client VPN endpoints should have client connection logging enabled
+Ensure EBS volumes attached to an EC2 instance is marked for deletion upon instance termination
+EC2 instance should have EBS optimization enabled
+EC2 instances should not use key pairs in running state
+EC2 instances high level findings should not be there in inspector scans
+EC2 instance IAM should not allow pass role and lambda invoke function access.
+EC2 instance IAM role should not be attached with credentials exposure access
+EC2 instance IAM role should not allow to alter critical s3 permissions configuration
+EC2 instance IAM role should not allow cloud log tampering access
+EC2 instance IAM role should not allow data destruction access
+EC2 instance IAM role should not allow database management write access
+EC2 instance IAM role should not allow defense evasion impact of AWS security services access
+EC2 instance IAM role should not allow destruction KMS access
+EC2 instance IAM role should not allow destruction RDS access
+EC2 instance IAM role should not allow elastic IP hijacking access.
+EC2 instance IAM role should not allow management level access
+EC2 instance IAM role should not allow new group creation with attached policy access
+EC2 instance IAM role should not allow new role creation with attached policy access
+EC2 instance IAM role should not allow new user creation with attached policy access
+EC2 instance IAM role should not allow oraganization write access
+EC2 instance IAM role should not allow privilege escalation risk access
+EC2 instance IAM role should not allow security group write access
+EC2 instance IAM role should not allow write access to resource based policies
+EC2 instance IAM role should not allow write permission on critical s3 configuration
+EC2 instance IAM role should not allow write level access
+Ensure no AWS EC2 Instances are older than 180 days
+AWS EC2 instances should have termination protection enabled
+Paravirtual EC2 instance types should not be used
+AWS EC2 launch templates should not assign public IPs to network interfaces
+Ensure unused ENIs are removed
+Ensure instances stopped for over 90 days are removed
+EC2 transit gateways should have auto accept shared attachments disabled
+ECR
+ECR private repositories should have tag immutability configured
+ECS
+ECS cluster container instances should have connected agent
+ECS clusters encryption at rest should be enabled
+ECS cluster should be configured with active services
+At least one instance should be registered with ECS cluster
+ECS services should be attached to a load balancer
+AWS ECS services should not have public IP addresses assigned to them automatically
+ECS containers should run as non-privileged
+ECS task definitions should not share the host's process namespace
+ECS task definitions should not use root user.
+EFS
+EFS access points should enforce a root directory
+EFS access points should enforce a user identity
+EFS file systems should be encrypted with CMK
+EFS file systems should enforce SSL
+EFS file systems should be in a backup plan
+EFS file systems should be protected by backup plan
+EFS file systems should restrict public access
+EKS
+EKS clusters endpoint public access should be restricted
+EKS clusters should not be configured within a default VPC
+EKS clusters should not use multiple security groups
+EKS clusters should run on a supported Kubernetes version
+ElastiCache
+Minor version upgrades should be automatically applied to ElastiCache for Redis cache clusters
+ElastiCache clusters should not use the default subnet group
+ElastiCache clusters should not use public_subnet
+ElastiCache for Redis replication groups should have automatic failover enabled
+ElastiCache for Redis replication groups should be encrypted at rest
+ElastiCache for Redis replication groups should be encrypted with CMK
+ElastiCache for Redis replication groups should be encrypted in transit
+ElastiCache for Redis replication groups before version 6.0 should use Redis Auth
+Elastic Beanstalk
+Elastic Beanstalk should stream logs to CloudWatch
+Elastic Beanstalk environment should have managed updates enabled
+ELB
+Classic Load Balancers should have connection draining enabled
+ELB application load balancer deletion protection should be enabled
+ELB application load balancers should be configured with defensive or strictest desync mitigation mode
+ELB application load balancers secured listener certificate should not expire within next 30 days
+ELB application load balancers secured listener certificate should not expire within next 7 days
+ELB application load balancers should have at least one outbound rule
+ELB application and network load balancers should use listeners
+ELB classic load balancers should be configured with defensive or strictest desync mitigation mode
+ELB classic load balancers should have at least one registered instance
+ELB classic load balancers should have at least one inbound rule
+ELB classic load balancers should have at least one outbound rule
+ELB network load balancers should have TLS listener security policy configured
+ELB listeners SSL/TLS protocol version should be checked
+EMR
+EMR clusters encryption at rest should be enabled
+EMR clusters client side encryption (CSE CMK) enabled with CMK
+EMR clusters server side encryption (SSE KMS) enabled with KMS
+EMR clusters encryption in transit should be enabled
+EMR cluster local disks should be encrypted with CMK
+EMR clusters local disk encryption should be enabled
+EMR clusters should have security configuration enabled
+Elasticsearch
+Elasticsearch domains should have audit logging enabled
+Elasticsearch domains should have cognito authentication enabled
+Elasticsearch domains should have at least three data nodes
+Elasticsearch domains should be configured with at least three dedicated master nodes
+Connections to Elasticsearch domains should be encrypted using TLS 1.2
+Elasticsearch domain error logging to CloudWatch Logs should be enabled
+Elasticsearch domains should have internal user database enabled
+EventBridge
+EventBridge custom event buses should have a resource-based policy attached
+FSx
+FSx for OpenZFS file systems should be configured to copy tags to backups and volumes
+Glacier
+Glacier vault should restrict public access
+Glue
+Glue connection SSL should be enabled
+Glue data catalog metadata encryption should be enabled
+Glue data catalog connection password encryption should be enabled
+GuardDuty
+GuardDuty Detector should be centrally configured
+GuardDuty findings should be archived
+GuardDuty Detector should not have high severity findings
+IAM
+Ensure that IAM Access analyzer is enabled for all regions
+IAM Access analyzer should be enabled without findings
+Ensure IAM password policy requires a minimum length of 14 or greater
+Ensure IAM password policy requires at least one lowercase letter
+Ensure IAM password policy requires at least one number
+Ensure IAM password policy requires at least one symbol
+Ensure IAM password policy requires at least one uppercase letter
+Ensure IAM password policy prevents password reuse
+Password policies for IAM users should have strong configurations with minimum length of 8 or greater
+Ensure IAM policy should not grant full access to service
+IAM unattached custom policy should not have statements with admin access
+IAM groups, users, and roles should not have any inline policies
+IAM inline policy should not have administrative privileges
+IAM AWS managed policies should be attached to IAM role
+Ensure IAM policies that allow full "*:*" administrative privileges are not attached
+IAM policies should not allow full '*' administrative privileges
+IAM roles should not have any assume role policies attached
+IAM custom policy should not have overly permissive STS role assumption
+Ensure inline policies attached to IAM users, roles, and groups should not allow blocked actions on KMS keys
+IAM policy should not grant full access to cloudtrail service
+IAM policy should not grant full access to KMS service
+IAM policy should be in use
+IAM roles should not have read only access for external AWS accounts
+Ensure IAM role not attached with Administratoraccess policy
+IAM roles that have not been used in 60 days should be removed
+Eliminate use of the 'root' user for administrative and daily tasks
+IAM Security Audit role should be created to conduct security audits
+Ensure that all the expired SSL/TLS certificates stored in AWS IAM are removed
+Ensure IAM users with access keys unused for 45 days or greater are disabled
+Ensure IAM users are assigned access keys and passwords at setup
+Ensure IAM users with console access unused for 45 days or greater are disabled
+Ensure access to AWSCloudShellFullAccess is restricted
+IAM users should be in at least one group
+IAM user should not have any inline or attached policies
+Ensure IAM policies are attached only to groups or roles
+Ensure there is only one active access key available for any single IAM user
+Ensure credentials unused for 45 days or greater are disabled
+Kinesis
+Kinesis firehose delivery streams should have server side encryption enabled
+Kinesis streams should be encrypted with CMK
+Kinesis streams should have server side encryption enabled
+KMS
+KMS key should be in use
+KMS key decryption should be restricted in IAM customer managed policy
+KMS key decryption should be restricted in IAM inline policy
+Lambda
+Ensure Cloudwatch Lambda insights is enabled
+Lambda functions CORS configuration should not allow all origins
+Lambda functions should be configured with a dead-letter queue
+Ensure encryption in transit is enabled for Lambda environment variables
+Lambda functions should restrict public URL
+Lambda functions tracing should be enabled
+Lambda functions should use latest runtimes
+Lambda functions variable should not have any sensitive data
+Lightsail
+Disable IPv6 Networking if not in use within your organization
+Ensure RDP is restricted to only IP address that should have this access
+Disable SSH and RDP ports for Lightsail instances when not needed
+Ensure SSH is restricted to only IP address that should have this access
+MQ
+MQ brokers should restrict public access
+MSK
+MSK clusters should be encrypted in transit among broker nodes
+Neptune
+Neptune DB clusters should publish audit logs to CloudWatch Logs
+Neptune DB clusters should have automated backups enabled
+Neptune DB clusters should be configured to copy tags to snapshots
+Neptune DB clusters should have deletion protection enabled
+Neptune DB clusters should be encrypted at rest
+Neptune DB clusters should have IAM database authentication enabled
+Neptune DB clusters should not use public_subnet
+Neptune DB cluster snapshots should be encrypted at rest
+Neptune DB cluster snapshots should not be public
+Network Firewall
+Network Firewall firewalls should have deletion protection enabled
+Networkfirewall firewall should be in a VPC
+Network Firewall logging should be enabled
+The default stateless action for Network Firewall policies should be drop or forward for fragmented packets
+The default stateless action for Network Firewall policies should be drop or forward for full packets
+Network Firewall policies should have at least one rule group associated
+Stateless network firewall rule group should not be empty
+OpenSearch
+OpenSearch domains cognito authentication should be enabled for kibana
+OpenSearch domains should have at least three data nodes
+OpenSearch domains should have fine-grained access control enabled
+OpenSearch domains internal user database should be disabled
+OpenSearch domains logs to AWS CloudWatch Logs
+OpenSearch domains should be updated to the latest service software version
+Organization
+Ensure Tag Policies are enabled
+Private Certificate Authority
+AWS Private CA root certificate authority should be disabled
+RDS
+Aurora MySQL DB clusters should publish audit logs to CloudWatch Logs
+RDS Aurora PostgreSQL clusters should not be exposed to local file read vulnerability
+RDS DB clusters should have automatic minor version upgrade enabled
+RDS DB clusters should be configured to copy tags to snapshots
+RDS clusters should have deletion protection enabled
+RDS DB clusters should be encrypted with CMK
+RDS DB clusters should be encrypted at rest
+An RDS event notifications subscription should be configured for critical cluster events
+IAM authentication should be configured for RDS clusters
+RDS database clusters should use a custom administrator username
+RDS DB instance and cluster enhanced monitoring should be enabled
+RDS databases and clusters should not use a database engine default port
+RDS DB instances backup retention period should be greater than or equal to 7
+RDS DB instances CA certificates should not expire within next 7 days
+RDS DB instances connections should be encrypted
+RDS DB instances should be configured to copy tags to snapshots
+RDS DB instances should have deletion protection enabled
+An RDS event notifications subscription should be configured for critical database instance events
+RDS DB instances should have iam authentication enabled
+RDS DB instances should be in a backup plan
+RDS instances should be deployed in a VPC
+RDS database instances should use a custom administrator username
+RDS DB instances should not use public subnet
+RDS PostgreSQL DB instances should not be exposed to local file read vulnerability
+RDS DB instance should be protected by backup plan
+An RDS event notifications subscription should be configured for critical database parameter group events
+An RDS event notifications subscription should be configured for critical database security group events
+Redshift
+AWS Redshift clusters should have automatic snapshots enabled
+AWS Redshift should have automatic upgrades to major versions enabled
+Redshift clusters should be encrypted with CMK
+Redshift cluster audit logging and encryption should be enabled
+AWS Redshift clusters should not use the default Admin username
+Redshift clusters should not use the default database name
+Route 53
+Route 53 domains auto renew should be enabled
+Route 53 domains should not expire within next 30 days
+Route 53 domains should not expire within next 7 days
+Route 53 domains should not be expired
+S3
+S3 access points should have block public access settings enabled
+S3 bucket default encryption should be enabled with KMS
+S3 buckets should have event notifications enabled
+S3 buckets should have lifecycle policies configured
+Ensure MFA Delete is enabled on S3 buckets
+S3 bucket ACLs should not be accessible to all authenticated user
+S3 bucket object lock should be enabled
+AWS S3 permissions granted to other AWS accounts in bucket policies should be restricted
+Ensure all data in AWS S3 has been discovered, classified and secured when required
+S3 buckets should prohibit public read access
+S3 buckets static website hosting should be disabled
+S3 buckets with versioning enabled should have lifecycle policies configured
+S3 public access should be blocked at bucket levels
+S3 public access should be blocked at account and bucket levels
+SageMaker
+Secrets Manager
+Secrets Manager secrets should be rotated within a specified number of days
+Secrets Manager secrets should be encrypted using CMK
+Remove unused Secrets Manager secrets
+Security Hub
+AWS Security Hub should be enabled for an AWS Account
+Step Functions
+Step Functions state machines should have logging turned on
+SNS
+Logging of delivery status should be enabled for notification messages sent to a topic
+SNS topic policies should prohibit cross account access
+SNS topic policies should prohibit publishing access
+SNS topic policies should prohibit subscription public access
+SQS
+SQS queues should be configured with a dead-letter queue.
+AWS SQS queues should be encrypted at rest
+SQS queues should be encrypted with KMS CMK
+SSM
+SSM parameters encryption should be enabled
+VPC
+VPC should be configured to use VPC endpoints
+VPC endpoint services should have acceptance required enabled
+VPC gateway endpoints should restrict public access
+VPC internet gateways should be attached to authorized vpc
+VPCs should exist in multiple regions
+VPCs should be in use
+VPCs peering connection should not be allowed in cross account
+VPCs peering connection route tables should have least privilege
+VPC route table should restrict public access to IGW
+VPC security groups should restrict ingress from 0.0.0.0/0 or ::/0 to cassandra ports 7199 or 9160 or 8888
+VPC security groups should restrict ingress from 0.0.0.0/0 or ::/0 to memcached port 11211
+VPC security groups should restrict ingress from 0.0.0.0/0 or ::/0 to mongoDB ports 27017 and 27018
+VPC security groups should restrict ingress from 0.0.0.0/0 or ::/0 to oracle ports 1521 or 2483
+VPC security groups should be associated with at least one ENI
+VPC security groups should restrict uses of 'launch-wizard' security groups.
+Ensure no security groups allow ingress from ::/0 to remote server administration ports
+Ensure no security groups allow ingress from 0.0.0.0/0 to remote server administration ports
+VPC security groups should restrict ingress kibana port access from 0.0.0.0/0
+Ensure no security groups allow ingress from 0.0.0.0/0 to port 3389
+VPC security groups should restrict ingress SSH access from 0.0.0.0/0
+Unused EC2 security groups should be removed
+VPCs subnets should exist in multiple availability zones
+VPCs should have both public and private subnets configured
+WAF
+WAF regional rule should have at least one condition
+WAF regional rule group should have at least one rule attached
+WAF regional web ACL should have at least one rule or rule group attached
+WAF global rule should have at least one condition
+WAF web ACL should be associated with an Application Load Balancer, API Gateway stage, or CloudFront distributions
+WAFv2
+AWS WAF rules should have CloudWatch metrics enabled
+A WAFV2 web ACL should have at least one rule or rule group
+WorkSpaces
+WorkSpaces root and user volume encryption should be enabled
+
+
+AWS Well-Architected Framework
+Operational Excellence
+OPS04 How do you design your workload so that you can understand its state?
+BP01 Implement application telemetry
+Auto Scaling groups with a load balancer should use health checks
+BP02 Implement and configure workload telemetry
+At least one enabled trail should be present in a region
+CloudWatch alarm should have an action configured
+OPS05 How do you reduce defects, ease remediation, and improve flow into production?
+BP03 Use configuration management systems
+"AWS Config should be enabled
+"
+BP05 Perform patch management
+"SSM managed instance patching should be compliant
+"
+Reliability
+REL01 How do you manage service quotas and constraints?
+BP03 Accommodate fixed service quotas and constraints through architecture
+Lambda functions concurrent execution limit configured
+REL02 How do you plan your network topology?
+BP01 Use highly available network connectivity for your workload public endpoints
+CloudFront distributions should have origin failover configured
+ELB application, network, and gateway load balancers should span multiple availability zones
+ELB classic load balancers should have cross-zone load balancing enabled
+ELB classic load balancers should span multiple availability zones
+Lambda functions should operate in more than one availability zone
+RDS DB clusters should be configured for multiple Availability Zones
+RDS DB instance multiple az should be enabled
+S3 bucket cross-region replication should be enabled
+BP02 Provision redundant connectivity between private networks in the cloud and on-premises environments
+ECS cluster instances should be in a VPC
+Both VPN tunnels provided by AWS Site-to-Site VPN should be in UP status
+REL06 How do you monitor workload resources?
+BP01 Monitor all components for the workload
+EC2 instance detailed monitoring should be enabled
+CodeBuild projects should have logging enabled
+ECS task definitions should have logging enabled
+S3 bucket logging should be enabled
+WAF web ACL logging should be enabled
+BP02 Define and calculate metrics (Aggregation)
+Elastic Beanstalk enhanced health reporting should be enabled
+REL07 How do you design your workload to adapt to changes in demand?
+BP01 Use automation when obtaining or scaling resources
+EC2 auto scaling groups should cover multiple availability zones
+DynamoDB table auto scaling should be enabled
+REL08 How do you implement change?
+BP05 Deploy changes with automation
+REL09 How do you back up data?
+BP02 Secure and encrypt backups
+EBS volume encryption at rest should be enabled
+BP03 Perform data backup automatically
+Backup recovery points manual deletion should be disabled
+Backup recovery points should not expire before retention period
+DynamoDB tables should be in a backup plan
+DynamoDB table point-in-time recovery should be enabled
+DynamoDB table should be protected by backup plan
+EC2 instances should be protected by backup plan
+ElastiCache Redis cluster automatic backup should be enabled with retention period of 15 days or greater
+FSx file system should be protected by backup plan
+RDS Aurora clusters should have backtracking enabled
+RDS Aurora clusters should be protected by backup plan
+RDS DB instance backup should be enabled
+Security
+SEC01 How do you securely operate your workload?
+BP01 Separate workloads using accounts
+BP02 Secure account root user and properties
+IAM root user hardware MFA should be enabled
+IAM root user MFA should be enabled
+BP06 Automate testing and validation of security controls in pipelines
+BP08 Evaluate and implement new security services and features regularly
+CodeBuild project plaintext environment variables should not contain sensitive AWS values
+SEC02 How do you manage identities for people and machines?
+BP01 Use strong sign-in mechanisms
+IAM password policies for users should have strong configurations
+IAM users should have hardware MFA enabled
+IAM user MFA should be enabled
+IAM users with console access should have MFA enabled
+IAM root user should not have access keys
+IAM administrator users should have MFA enabled
+SageMaker notebook instances root access should be disabled
+BP02 Use temporary credentials
+Secrets Manager secrets should be rotated within specific number of days
+Secrets Manager secrets should be rotated as per the rotation schedule
+BP03 Store and use secrets securely
+CloudFormation stacks outputs should not have any secrets
+EC2 instances user data should not have secrets
+ECS task definition containers should not have secrets passed as environment variables
+BP05 Audit and rotate credentials periodically
+IAM user access keys should be rotated at least every 90 days
+KMS CMK rotation should be enabled
+Secrets Manager secrets should have automatic rotation enabled
+SEC03 How do you manage permissions for people and machines?
+BP01 Define access requirements
+ECS task definition container definitions should be checked for host mode
+CloudWatch should not allow cross-account sharing
+BP02 Grant least privilege access
+ECS containers should be limited to read-only access to root filesystems
+EMR cluster Kerberos should be enabled
+BP03 Establish emergency access process
+IAM groups should have at least one user
+Ensure managed IAM policies should not allow blocked actions on KMS keys
+BP04 Reduce permissions continuously
+IAM policy should not have statements with admin access
+BP05 Define permission guardrails for your organization
+BP06 Manage access based on lifecycle
+IAM user credentials that have not been used in 90 days should be disabled
+Log group retention period should be at least 365 days
+CodeBuild projects should not be unused for 90 days or greater
+VPC EIPs should be associated with an EC2 instance or ENI
+ECR repositories should have lifecycle policies configured
+Ensure IAM password policy expires passwords within 90 days or less
+BP07 Analyze public and cross-account access
+EC2 instances should not have a public IP address
+EMR cluster master nodes should not have public IP addresses
+EMR public access should be blocked at account level
+Lambda functions should restrict public access
+RDS DB instances should prohibit public access
+RDS snapshots should prohibit public access
+KMS CMK policies should prohibit public access
+Redshift clusters should prohibit public access
+S3 bucket policy should prohibit public access
+S3 buckets should prohibit public write access
+Ensure the S3 bucket CloudTrail logs to is not publicly accessible
+ECR repositories should prohibit public access
+ELB load balancers should prohibit public access
+S3 public access should be blocked at account level
+SNS topic policies should prohibit public access
+SQS queue policies should prohibit public access
+SSM documents should not be public
+BP08 Share resources securely within your organization
+Secrets Manager secrets that have not been used in 90 days should be removed
+CodeBuild projects should not use an user controlled buildspec
+SEC04 How do you detect and investigate security events?
+BP01 Configure service and application logging
+API Gateway stage logging should be enabled
+OpenSearch domains should have audit logging enabled.
+CloudTrail trails should be integrated with CloudWatch logs
+All S3 buckets should log S3 data events in CloudTrail
+ACM certificates should have transparency logging enabled
+Lambda functions CloudTrail logging should be enabled
+CloudFront distributions access logs should be enabled
+3.10 Ensure that Object-level logging for write events is enabled for S3 bucket
+3.11 Ensure that Object-level logging for read events is enabled for S3 bucket
+EKS clusters should have control plane audit logging enabled
+RDS DB instances should be integrated with CloudWatch logs
+Route 53 zones should have query logging enabled
+S3 buckets object logging should be enabled
+BP02 Analyze logs, findings, and metrics centrally
+AWS Config should be enabled
+BP03 Automate response to events
+Elasticsearch domain should send logs to CloudWatch
+ELB application and classic load balancer logging should be enabled
+At least one multi-region AWS CloudTrail should be present in an account
+Database logging should be enabled
+Logging should be enabled on AWS WAFv2 regional and global web access control list (ACLs)
+SEC05 How do you protect your network resources?
+BP01 Create network layers
+ES domains should be in a VPC
+OpenSearch domains should be in a VPC
+EC2 instances should be in a VPC
+AWS Redshift enhanced VPC routing should be enabled
+ELB application load balancers should have Web Application Firewall (WAF) enabled
+API Gateway stage should be associated with waf
+CloudFront distributions should have AWS WAF enabled
+EKS clusters endpoint should restrict public access
+SageMaker models should have network isolation enabled
+SageMaker models should be in a VPC
+SageMaker notebook instances should be in a VPC
+SageMaker training jobs should have network isolation enabled
+SageMaker training jobs should be in VPC
+BP02 Control traffic at all layers
+EBS snapshots should not be publicly restorable
+SageMaker notebook instances should not have direct internet access
+VPC subnet auto assign public IP should be disabled
+S3 buckets access control lists (ACLs) should not be used to manage user access to buckets
+2.1.3 Ensure MFA Delete is enabled on S3 buckets
+BP03 Automate network protection
+DMS replication instances should not be publicly accessible
+Auto Scaling launch config public IP should be disabled
+Network ACLs should not allow ingress from 0.0.0.0/0 to port 22 or port 3389
+VPC Security groups should only allow unrestricted incoming traffic for authorized ports
+5.2 Ensure no security groups allow ingress from 0.0.0.0/0 to remote server administration ports
+VPC security groups should restrict ingress TCP and UDP access from 0.0.0.0/0
+VPC security groups should restrict ingress access on ports 20, 21, 22, 3306, 3389, 4333 from 0.0.0.0/0
+VPC security groups should restrict ingress Kafka port access from 0.0.0.0/0
+Security groups should not allow unrestricted access to ports with high risk
+VPC security groups should restrict ingress redis access from 0.0.0.0/0
+WAF global web ACL should have at least one rule or rule group
+WAF global rule group should have at least one rule
+VPC network access control lists (network ACLs) should be associated with a subnet.
+VPC default security group should not allow inbound and outbound traffic
+EC2 instances should not be attached to 'launch wizard' security groups
+Route53 domains privacy protection should be enabled
+Route 53 domains should have transfer lock enabled
+BP04 Implement inspection and protection
+GuardDuty should be enabled
+API Gateway stages should have authorizers configured
+SEC06 How do you protect your compute resources?
+BP01 Perform vulnerability management
+RDS DB instance automatic minor version upgrade should be enabled
+At least one trail should be enabled with security best practices
+EC2 instances should use IMDSv2
+Public EC2 instances should have IAM profile attached
+BP02 Reduce attack surface
+Lambda functions should be in a VPC
+ECS clusters should have container insights enabled
+ECS fargate services should run on the latest fargate platform version
+BP03 Implement managed services
+AWS Redshift should have required maintenance settings
+BP04 Automate compute protection
+BP05 Enable people to perform actions at a distance
+EC2 instances should have IAM profile attached
+EC2 instances should be managed by AWS Systems Manager
+EC2 instances should not use multiple ENIs
+EC2 stopped instances should be removed in 30 days
+BP06 Validate software integrity
+EBS volumes should be attached to EC2 instances
+SSM managed instance associations should be compliant
+SSM managed instance patching should be compliant
+CloudTrail trail log file validation should be enabled
+SEC08 How do you protect your data at rest?
+BP01 Implement secure key management
+API Gateway stage cache encryption at rest should be enabled
+Backup recovery points should be encrypted
+CodeBuild project artifact encryption should be enabled
+CodeBuild project S3 logs should be encrypted
+KMS keys should not be pending deletion
+BP02 Enforce encryption at rest
+EFS file system encryption at rest should be enabled
+ES domain encryption at rest should be enabled
+OpenSearch domains should have encryption at rest enabled
+RDS DB instance encryption at rest should be enabled
+RDS DB snapshots should be encrypted at rest
+CloudTrail trail logs should be encrypted with KMS CMK
+DynamoDB table should have encryption enabled
+EBS default encryption should be enabled
+EKS clusters should be configured to have kubernetes secrets encrypted using KMS
+Glue dev endpoints CloudWatch logs encryption should be enabled
+Glue dev endpoints job bookmark encryption should be enabled
+Glue dev endpoints S3 encryption should be enabled
+Glue jobs S3 encryption should be enabled
+Glue jobs bookmarks encryption should be enabled
+Glue jobs CloudWatch logs encryption should be enabled
+SageMaker training jobs should be enabled with inter-container traffic encryption
+SageMaker training jobs volumes and outputs should have KMS encryption enabled
+BP03 Automate data at rest protection
+AWS Redshift audit logging should be enabled
+AWS Redshift clusters should be encrypted with KMS
+S3 bucket default encryption should be enabled
+SageMaker endpoint configuration encryption should be enabled
+SageMaker notebook instance encryption should be enabled
+SageMaker notebook instances should be encrypted using CMK
+BP04 Enforce access control
+SNS topics should be encrypted at rest
+S3 bucket versioning should be enabled
+AWS account should be part of AWS Organizations
+SEC09 How do you protect your data in transit?
+BP01 Implement secure key and certificate management
+ACM certificates should not expire within 30 days
+ELB classic load balancers should use SSL certificates
+ELB application and network load balancers should only use SSL or HTTPS listeners
+BP02 Enforce encryption in transit
+ELB application load balancers should be drop HTTP headers
+ELB application load balancers should redirect HTTP requests to HTTPS
+Elasticsearch domain node-to-node encryption should be enabled
+API Gateway stage should uses SSL certificate
+OpenSearch domains node-to-node encryption should be enabled
+OpenSearch domains should use HTTPS
+CloudFront distributions should encrypt traffic to custom origins
+CloudFront distributions should not use deprecated SSL protocols between edge locations and custom origins
+ELB listeners should use secure SSL cipher
+S3 buckets should enforce SSL
+BP03 Automate detection of unintended data access
+Redshift cluster encryption in transit should be enabled
+BP04 Authenticate network communications
+ELB classic load balancers should only use SSL or HTTPS listeners
+VPC flow logs should be enabled
+SEC10 How do you anticipate, respond to, and recover from incidents?
+Ensure a support role has been created to manage incidents with AWS Support
+SEC11 How do you incorporate and validate the security properties of applications throughout the design, development, and deployment lifecycle?
+BP01 Identify key personnel and external resources
+ECR repositories should have image scan on push enabled
