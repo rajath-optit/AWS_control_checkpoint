@@ -175,3 +175,108 @@
 - Route 53 domains should not expire within the next 30 days.
 - Route 53 domains should not expire within the next 7 days.
 - Route 53 domains should not be expired.
+
+## S3
+- **S3 access points** should have block public access settings enabled.
+- **S3 bucket default encryption** should be enabled with KMS.
+- **S3 buckets** should have event notifications enabled.
+- **S3 buckets** should have lifecycle policies configured.
+- Ensure **MFA Delete** is enabled on S3 buckets.
+- **S3 bucket ACLs** should not be accessible to all authenticated users.
+- **S3 bucket object lock** should be enabled.
+- AWS **S3 permissions** granted to other AWS accounts in bucket policies should be restricted.
+- Ensure all data in AWS S3 has been discovered, classified, and secured when required.
+- **S3 buckets** should prohibit public read access.
+- **S3 buckets** static website hosting should be disabled.
+- **S3 buckets** with versioning enabled should have lifecycle policies configured.
+- **S3 public access** should be blocked at bucket levels.
+- **S3 public access** should be blocked at account and bucket levels.
+
+## SageMaker
+- SageMaker notebooks should have encryption enabled.
+- SageMaker endpoints should be configured with encryption.
+- SageMaker models should use private endpoints.
+
+## Secrets Manager
+- **Secrets Manager secrets** should be rotated within a specified number of days.
+- **Secrets Manager secrets** should be encrypted using CMK.
+- Remove unused **Secrets Manager secrets**.
+
+## Security Hub
+- **AWS Security Hub** should be enabled for an AWS Account.
+
+## Step Functions
+- **Step Functions state machines** should have logging turned on.
+
+## SNS
+- Logging of delivery status should be enabled for notification messages sent to a topic.
+- **SNS topic policies** should prohibit cross-account access.
+- **SNS topic policies** should prohibit publishing access.
+- **SNS topic policies** should prohibit subscription public access.
+
+## SQS
+- **SQS queues** should be configured with a dead-letter queue.
+- AWS **SQS queues** should be encrypted at rest.
+- **SQS queues** should be encrypted with KMS CMK.
+
+## SSM
+- **SSM parameters encryption** should be enabled.
+
+## VPC
+- **VPC** should be configured to use VPC endpoints.
+- **VPC endpoint services** should have acceptance required enabled.
+- **VPC gateway endpoints** should restrict public access.
+- **VPC internet gateways** should be attached to authorized VPC.
+- **VPCs** should exist in multiple regions.
+- **VPCs** should be in use.
+- **VPC peering connections** should not be allowed in cross-account scenarios.
+- **VPC peering connection route tables** should have least privilege.
+- **VPC route table** should restrict public access to IGW.
+- **VPC security groups** should restrict ingress from `0.0.0.0/0` or `::/0` to Cassandra ports `7199`, `9160`, or `8888`.
+- **VPC security groups** should restrict ingress from `0.0.0.0/0` or `::/0` to Memcached port `11211`.
+- **VPC security groups** should restrict ingress from `0.0.0.0/0` or `::/0` to MongoDB ports `27017` and `27018`.
+- **VPC security groups** should restrict ingress from `0.0.0.0/0` or `::/0` to Oracle ports `1521` or `2483`.
+- **VPC security groups** should be associated with at least one ENI.
+- **VPC security groups** should restrict use of 'launch-wizard' security groups.
+- Ensure no security groups allow ingress from `::/0` to remote server administration ports.
+- Ensure no security groups allow ingress from `0.0.0.0/0` to remote server administration ports.
+- **VPC security groups** should restrict ingress Kibana port access from `0.0.0.0/0`.
+- Ensure no security groups allow ingress from `0.0.0.0/0` to port `3389`.
+- **VPC security groups** should restrict ingress SSH access from `0.0.0.0/0`.
+- Unused **EC2 security groups** should be removed.
+- **VPC subnets** should exist in multiple availability zones.
+- **VPCs** should have both public and private subnets configured.
+
+------------------------------------------------------------------------------------------------------------
+
+## WAF
+- **WAF regional rule** should have at least one condition.
+- **WAF regional rule group** should have at least one rule attached.
+- **WAF regional web ACL** should have at least one rule or rule group attached.
+- **WAF global rule** should have at least one condition.
+- **WAF web ACL** should be associated with an Application Load Balancer, API Gateway stage, or CloudFront distributions.
+
+## WAFv2
+- **AWS WAF rules** should have CloudWatch metrics enabled.
+- A **WAFv2 web ACL** should have at least one rule or rule group.
+
+## WorkSpaces
+- **WorkSpaces root and user volume encryption** should be enabled.
+
+# AWS Well-Architected Framework
+
+## Operational Excellence
+
+### OPS04: How do you design your workload so that you can understand its state?
+- **BP01:** Implement application telemetry.
+- Auto Scaling groups with a load balancer should use health checks.
+- **BP02:** Implement and configure workload telemetry.
+- At least one enabled trail should be present in a region.
+- **CloudWatch alarm** should have an action configured.
+
+### OPS05: How do you reduce defects, ease remediation, and improve flow into production?
+- **BP03:** Use configuration management systems.
+- **AWS Config** should be enabled.
+- **BP05:** Perform patch management.
+- **SSM managed instance patching** should be compliant.
+
